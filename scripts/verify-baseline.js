@@ -129,6 +129,35 @@ HTML_FILES.forEach(file => {
   }
 });
 
+// 6. Check In-Text Citations & Reference Routing
+console.log('\n--- Checking Academic Citations & Reference Routing ---');
+HTML_FILES.forEach(file => {
+  const filePath = path.join(ROOT_DIR, file);
+  if (!fs.existsSync(filePath)) return;
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  const targetRegex = /id=["'](ref-[^"']+)["']/g;
+  const targetIds = new Set();
+  let m;
+  while ((m = targetRegex.exec(content)) !== null) {
+    targetIds.add(m[1]);
+  }
+
+  const citationRegex = /href=["']#(ref-[^"']+)["']/g;
+  const missingCitations = [];
+  while ((m = citationRegex.exec(content)) !== null) {
+    if (!targetIds.has(m[1])) {
+      missingCitations.push(m[1]);
+    }
+  }
+
+  if (missingCitations.length === 0) {
+    logPass(`${file}: All citations match valid reference IDs (${targetIds.size} references found).`);
+  } else {
+    logFail(`${file}: Broken citations without target: ${[...new Set(missingCitations)].join(', ')}`);
+  }
+});
+
 // Final Summary
 console.log('\n\x1b[1m=== Smoke-Test Summary ===\x1b[0m');
 if (totalErrors === 0) {
