@@ -1,6 +1,6 @@
 {
-  "source_pdf": "C:\\phd\\poster\\recovery\\Poster_A0_last.pdf",
-  "source_pptx": "C:\\phd\\poster\\recovery\\Poster_A0_last.pptx",
+  "source_pdf": "Poster PDF archive (redacted for public repository)",
+  "source_pptx": "Poster PPTX archive (redacted for public repository)",
   "pdf_sha256": "32e95f69435f408b772b8d44d772621c87b9db2a4f342dda1222078d8dd722bc",
   "panels": [
     {
@@ -205,7 +205,7 @@
     ]
   },
   "title": "Mineral Systems–Guided Prospectivity Screening with Spatial-Statistical Testing and Basement-Exposure Controls in the Kuldjuktau Range, Uzbekistan",
-  "authors_and_affiliations": "Abdulla Baratov1, Bum Han Lee1,2*\n1Ore Geology Research Center, Korea Institute of Geoscience and Mineral Resources    2Major of Geological Science, University of Science and Technology (UST)    *leebh@kigam.re.kr",
+  "authors_and_affiliations": "Abdulla Baratov1, Bum Han Lee1,2*\n1Ore Geology Research Center, Korea Institute of Geoscience and Mineral Resources    2Major of Geological Science, University of Science and Technology (UST)    *lee@kigam.re.kr",
   "icons_source": "https://github.com/lucide-icons/lucide",
   "flags_source": "https://github.com/lipis/flag-icons",
   "cover": {
