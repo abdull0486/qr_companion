@@ -31,7 +31,7 @@
     if (!toolbar || !readingBlocks.length) return;
 
     const anchorOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset')) || 0;
-    const line = Math.max(toolbar.getBoundingClientRect().bottom + 25, anchorOffset + 8);
+    const line = Math.max(toolbar.getBoundingClientRect().bottom + 20, anchorOffset + 8);
     const visible = readingBlocks.find(block => {
       const rect = block.getBoundingClientRect();
       return rect.bottom > line && rect.top < Math.max(line + 50, innerHeight / 2);
@@ -88,8 +88,9 @@
     setZoom(1);
     const viewerScroll = viewer.querySelector('.viewer-scroll');
     if (viewerScroll) viewerScroll.scrollTo(0, 0);
-    viewer.showModal();
     document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    viewer.showModal();
   }
 
   if (hasViewerModal) {
@@ -102,6 +103,7 @@
 
     viewer.addEventListener('close', () => {
       document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
       imageTrigger?.focus({ preventScroll: true });
     });
   }
