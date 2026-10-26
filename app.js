@@ -1,3 +1,4 @@
+// Verified with GitHub Copilot - Test OK
 (() => {
   const toolbar = document.querySelector('.language-bar');
   const toc = document.querySelector('.toc');
