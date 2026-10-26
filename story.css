@@ -1104,8 +1104,211 @@ html[lang="ko"] .chapter-copy > p {
   line-height: 1.9;
 }
 
-/* 8. Desktop Docked Sidecar Layout (>= 760px) */
+/* 8. Mobile Edge Drawer (Side Panel Navigation) */
+.edge-tab-trigger {
+  position: fixed;
+  right: 0;
+  top: 48%;
+  transform: translateY(-50%);
+  z-index: 35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 44px;
+  min-height: 52px;
+  padding: 10px 6px;
+  background: rgba(37, 37, 32, 0.88);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 0;
+  border-radius: 12px 0 0 12px;
+  box-shadow: -4px 6px 20px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.edge-tab-trigger:hover,
+.edge-tab-trigger:active {
+  background: var(--ink);
+  transform: translateY(-50%) translateX(-2px);
+}
+
+.edge-tab-trigger .icon {
+  filter: invert(1);
+  width: 17px;
+  height: 17px;
+}
+
+.edge-tab-trigger .edge-label {
+  writing-mode: vertical-rl;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+}
+
+.edge-drawer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.edge-drawer[open] {
+  pointer-events: auto;
+}
+
+.edge-drawer::backdrop {
+  background: rgba(20, 25, 24, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.24s ease;
+}
+
+.edge-drawer.is-open::backdrop {
+  opacity: 1;
+}
+
+.edge-drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(86vw, 360px);
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.edge-drawer.is-open .edge-drawer-panel {
+  transform: translateX(0);
+}
+
+.edge-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.edge-drawer-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.edge-drawer-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--stone);
+  color: var(--muted);
+}
+
+.edge-drawer-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--stone);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.edge-drawer-close:hover {
+  background: #e5e8e3;
+}
+
+.edge-drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 10px 12px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edge-drawer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  color: var(--ink);
+  background: var(--stone-soft);
+  text-decoration: none;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.edge-drawer-item:hover,
+.edge-drawer-item.is-active {
+  background: #ffffff;
+  border-color: rgba(83, 101, 76, 0.28);
+  box-shadow: 0 4px 12px rgba(37, 45, 44, 0.06);
+  transform: translateX(-2px);
+}
+
+.edge-drawer-item.is-active .toc-number {
+  background: var(--strata);
+  color: #ffffff;
+  border-color: var(--strata);
+}
+
+.edge-drawer-item .icon {
+  margin-left: auto;
+  opacity: 0.4;
+  width: 15px;
+  height: 15px;
+}
+
+/* 9. Desktop Docked Sidecar Layout (>= 760px) */
 @media (min-width: 760px) {
+  .edge-tab-trigger {
+    display: none !important;
+  }
+
+  .edge-drawer {
+    display: none !important;
+  }
+
   .wrap {
     padding-left: 30px;
     padding-right: 30px;

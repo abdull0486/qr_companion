@@ -131,6 +131,11 @@
     }
 
     if (href === '#mundarija') {
+      if (window.innerWidth < 760 && drawerDialog) {
+        event.preventDefault();
+        openDrawer();
+        return;
+      }
       if (toc) toc.open = true;
     } else if (link.closest('.nav-grid') && toc) {
       toc.open = false;
@@ -139,6 +144,108 @@
     if (link.matches('.language-bar a[data-page]')) syncReadingLocation();
   });
 
+  // Edge Drawer Side Panel logic for Mobile
+  let drawerDialog = null;
+  let edgeTrigger = null;
+
+  function initEdgeDrawer() {
+    const navGrid = document.querySelector('.nav-grid');
+    if (!navGrid) return;
+
+    const lang = document.documentElement.lang || 'uz';
+    const drawerTitleText = lang === 'ko' ? '목차' : (lang === 'en' ? 'Contents' : 'Bo‘limlar');
+    const closeAriaText = lang === 'ko' ? '닫기' : (lang === 'en' ? 'Close' : 'Yopish');
+
+    // 1. Create Floating Edge Trigger Button
+    edgeTrigger = document.createElement('button');
+    edgeTrigger.type = 'button';
+    edgeTrigger.className = 'edge-tab-trigger';
+    edgeTrigger.setAttribute('aria-label', drawerTitleText);
+    edgeTrigger.setAttribute('title', drawerTitleText);
+    edgeTrigger.innerHTML = '<img class="icon" src="assets/icons/layout-grid.svg" alt="" aria-hidden="true" width="17" height="17"><span class="edge-label">' + drawerTitleText + '</span>';
+    document.body.appendChild(edgeTrigger);
+
+    // 2. Create Edge Drawer Dialog
+    drawerDialog = document.createElement('dialog');
+    drawerDialog.className = 'edge-drawer';
+    drawerDialog.id = 'edge-drawer';
+    drawerDialog.setAttribute('aria-labelledby', 'edge-drawer-title');
+
+    const drawerPanel = document.createElement('div');
+    drawerPanel.className = 'edge-drawer-panel';
+
+    const header = document.createElement('div');
+    header.className = 'edge-drawer-header';
+    header.innerHTML = '<div class="edge-drawer-title" id="edge-drawer-title"><img class="icon" src="assets/icons/layout-grid.svg" alt="" aria-hidden="true" width="18" height="18"><span>' + drawerTitleText + '</span><span class="edge-drawer-count">12</span></div><button type="button" class="edge-drawer-close" aria-label="' + closeAriaText + '"><img class="icon" src="assets/icons/x.svg" alt="" aria-hidden="true" width="20" height="20"></button>';
+
+    const content = document.createElement('div');
+    content.className = 'edge-drawer-content';
+
+    navGrid.querySelectorAll('a').forEach(link => {
+      const clone = link.cloneNode(true);
+      clone.className = 'edge-drawer-item';
+      clone.addEventListener('click', () => {
+        closeDrawer();
+      });
+      content.appendChild(clone);
+    });
+
+    drawerPanel.appendChild(header);
+    drawerPanel.appendChild(content);
+    drawerDialog.appendChild(drawerPanel);
+    document.body.appendChild(drawerDialog);
+
+    edgeTrigger.addEventListener('click', openDrawer);
+    header.querySelector('.edge-drawer-close').addEventListener('click', closeDrawer);
+
+    drawerDialog.addEventListener('click', event => {
+      if (event.target === drawerDialog) closeDrawer();
+    });
+
+    drawerDialog.addEventListener('cancel', event => {
+      event.preventDefault();
+      closeDrawer();
+    });
+  }
+
+  function openDrawer() {
+    if (!drawerDialog) return;
+    drawerDialog.showModal();
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+      drawerDialog.classList.add('is-open');
+    });
+    syncActiveDrawerItem();
+  }
+
+  function closeDrawer() {
+    if (!drawerDialog) return;
+    drawerDialog.classList.remove('is-open');
+    setTimeout(() => {
+      if (drawerDialog.open) drawerDialog.close();
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    }, 240);
+  }
+
+  function syncActiveDrawerItem() {
+    if (!drawerDialog) return;
+    const currentChapter = [...document.querySelectorAll('.chapter')].reverse().find(ch => {
+      return ch.getBoundingClientRect().top <= 140;
+    }) || document.querySelector('.chapter');
+
+    const targetHash = currentChapter ? '#' + currentChapter.id : '#bolim-01';
+    drawerDialog.querySelectorAll('.edge-drawer-item').forEach(item => {
+      if (item.getAttribute('href') === targetHash) {
+        item.classList.add('is-active');
+      } else {
+        item.classList.remove('is-active');
+      }
+    });
+  }
+
+  initEdgeDrawer();
   if (hasToc && location.hash === '#mundarija') toc.open = true;
   updateReturnLinks();
 
