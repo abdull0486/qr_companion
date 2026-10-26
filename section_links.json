@@ -1,0 +1,122 @@
+[
+  {
+    "number": 1,
+    "poster_section": "1 Savol va geologik joylashuv",
+    "fragment": "#bolim-01",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 2,
+    "poster_section": "2 Geologik tuzilish va magmatizm",
+    "fragment": "#bolim-02",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 3,
+    "poster_section": "3 Kon turlari va kelib chiqishi",
+    "fragment": "#bolim-03",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 4,
+    "poster_section": "4 Mineral namoyonlar to‘plami",
+    "fragment": "#bolim-04",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 5,
+    "poster_section": "5 Mineral tizimlar yondashuvi",
+    "fragment": "#bolim-05",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 6,
+    "poster_section": "6 Jarayondan o‘lchanadigan belgigacha",
+    "fragment": "#bolim-06",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 7,
+    "poster_section": "7 Fundament ochilishi muammosi",
+    "fragment": "#bolim-07",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 8,
+    "poster_section": "8 Masofadan zondlash dalillari va sinov tartibi",
+    "fragment": "#bolim-08",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 9,
+    "poster_section": "9 Birinchi bosqichdagi 67 skrining zona",
+    "fragment": "#bolim-09",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 10,
+    "poster_section": "10 Asosiy natija va fundament nazorati",
+    "fragment": "#bolim-10",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 11,
+    "poster_section": "11 Fundament ichida tizimga xos bog‘lanishlar",
+    "fragment": "#bolim-11",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  },
+  {
+    "number": 12,
+    "poster_section": "12 Javob cheklovlar va keyingi ishlar",
+    "fragment": "#bolim-12",
+    "languages": {
+      "uz": "index.html",
+      "en": "en.html",
+      "ko": "ko.html"
+    }
+  }
+]

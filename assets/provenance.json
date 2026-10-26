@@ -1,0 +1,219 @@
+{
+  "source_pdf": "C:\\phd\\poster\\recovery\\Poster_A0_last.pdf",
+  "source_pptx": "C:\\phd\\poster\\recovery\\Poster_A0_last.pptx",
+  "pdf_sha256": "32e95f69435f408b772b8d44d772621c87b9db2a4f342dda1222078d8dd722bc",
+  "panels": [
+    {
+      "number": 1,
+      "image": "panel-01.webp",
+      "preview": "panel-01-preview.webp",
+      "width": 1738,
+      "height": 2281,
+      "preview_width": 900,
+      "preview_height": 1181,
+      "bounds_emu": [
+        731520,
+        10607040,
+        9299448,
+        12200726
+      ]
+    },
+    {
+      "number": 2,
+      "image": "panel-02.webp",
+      "preview": "panel-02-preview.webp",
+      "width": 1738,
+      "height": 1097,
+      "preview_width": 900,
+      "preview_height": 568,
+      "bounds_emu": [
+        731520,
+        23127806,
+        9299448,
+        5872308
+      ]
+    },
+    {
+      "number": 3,
+      "image": "panel-03.webp",
+      "preview": "panel-03-preview.webp",
+      "width": 1738,
+      "height": 897,
+      "preview_width": 900,
+      "preview_height": 464,
+      "bounds_emu": [
+        731520,
+        29320154,
+        9299448,
+        4800600
+      ]
+    },
+    {
+      "number": 4,
+      "image": "panel-04.webp",
+      "preview": "panel-04-preview.webp",
+      "width": 1738,
+      "height": 1332,
+      "preview_width": 900,
+      "preview_height": 690,
+      "bounds_emu": [
+        731520,
+        34440794,
+        9299448,
+        7127830
+      ]
+    },
+    {
+      "number": 5,
+      "image": "panel-05.webp",
+      "preview": "panel-05-preview.webp",
+      "width": 1739,
+      "height": 1534,
+      "preview_width": 900,
+      "preview_height": 794,
+      "bounds_emu": [
+        10488168,
+        10607040,
+        9299448,
+        8202854
+      ]
+    },
+    {
+      "number": 6,
+      "image": "panel-06.webp",
+      "preview": "panel-06-preview.webp",
+      "width": 1739,
+      "height": 1034,
+      "preview_width": 900,
+      "preview_height": 535,
+      "bounds_emu": [
+        10488168,
+        19129934,
+        9299448,
+        5532120
+      ]
+    },
+    {
+      "number": 7,
+      "image": "panel-07.webp",
+      "preview": "panel-07-preview.webp",
+      "width": 1739,
+      "height": 538,
+      "preview_width": 900,
+      "preview_height": 278,
+      "bounds_emu": [
+        10488168,
+        24982094,
+        9299448,
+        2880360
+      ]
+    },
+    {
+      "number": 8,
+      "image": "panel-08.webp",
+      "preview": "panel-08-preview.webp",
+      "width": 1739,
+      "height": 1533,
+      "preview_width": 900,
+      "preview_height": 793,
+      "bounds_emu": [
+        10488168,
+        28182494,
+        9299448,
+        8202168
+      ]
+    },
+    {
+      "number": 9,
+      "image": "panel-09.webp",
+      "preview": "panel-09-preview.webp",
+      "width": 1739,
+      "height": 909,
+      "preview_width": 900,
+      "preview_height": 470,
+      "bounds_emu": [
+        10488168,
+        36704702,
+        9299448,
+        4863922
+      ]
+    },
+    {
+      "number": 10,
+      "image": "panel-10.webp",
+      "preview": "panel-10-preview.webp",
+      "width": 1738,
+      "height": 1763,
+      "preview_width": 900,
+      "preview_height": 913,
+      "bounds_emu": [
+        20244815,
+        10607040,
+        9299448,
+        9432020
+      ]
+    },
+    {
+      "number": 11,
+      "image": "panel-11.webp",
+      "preview": "panel-11-preview.webp",
+      "width": 1738,
+      "height": 2136,
+      "preview_width": 900,
+      "preview_height": 1106,
+      "bounds_emu": [
+        20244816,
+        20359100,
+        9299448,
+        11429748
+      ]
+    },
+    {
+      "number": 12,
+      "image": "panel-12.webp",
+      "preview": "panel-12-preview.webp",
+      "width": 1738,
+      "height": 1204,
+      "preview_width": 900,
+      "preview_height": 623,
+      "bounds_emu": [
+        20244816,
+        32108888,
+        9299448,
+        6442216
+      ]
+    }
+  ],
+  "kigam": {
+    "file": "kigam-poster.png",
+    "source": "Exact PDF header crop",
+    "bounds_emu": [
+      814424,
+      805136,
+      2769198,
+      1336747
+    ]
+  },
+  "ust": {
+    "file": "ust-poster.png",
+    "source": "Exact PDF header crop",
+    "bounds_emu": [
+      26806449,
+      805413,
+      2680641,
+      1336747
+    ]
+  },
+  "title": "Mineral Systems–Guided Prospectivity Screening with Spatial-Statistical Testing and Basement-Exposure Controls in the Kuldjuktau Range, Uzbekistan",
+  "authors_and_affiliations": "Abdulla Baratov1, Bum Han Lee1,2*\n1Ore Geology Research Center, Korea Institute of Geoscience and Mineral Resources    2Major of Geological Science, University of Science and Technology (UST)    *leebh@kigam.re.kr",
+  "icons_source": "https://github.com/lucide-icons/lucide",
+  "flags_source": "https://github.com/lipis/flag-icons",
+  "cover": {
+    "source_shape": "Coyan Fig3 geology",
+    "source": "Coyan et al., 2024, Fig. 3 (CC BY 4.0), as included in the poster",
+    "file": "cover-geology.webp",
+    "mobile": "cover-geology-mobile.webp",
+    "width": 1359,
+    "height": 1007
+  }
+}

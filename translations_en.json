@@ -1,0 +1,99 @@
+[
+  {
+    "heading": "Introduction",
+    "body": [
+      "This study examines a prospectivity ranking for the Kuldjuktau area built from open remote-sensing and archival geological data. The central question is whether a high score actually distinguishes mineral occurrences or mainly marks places where Paleozoic basement is exposed at the surface. We therefore compare each result with the simple baseline provided by basement exposure."
+    ]
+  },
+  {
+    "heading": "1 Research question and geological setting",
+    "body": [
+      "Kuldjuktau lies in the Central Kyzylkum, about 100 km southwest of the Muruntau deposit. It forms part of the Kyzylkum segment of the South Tien Shan fold-and-thrust belt. On geological maps, Paleozoic rocks appear as separate exposure windows within Mesozoic and Cenozoic cover. Coyan and colleagues and Mirkamalov and colleagues describe this tectonic and stratigraphic setting.",
+      "Our 2,365 km² study area is the computational domain selected for the poster, not the entire mountain range. Our first question is whether open-data layers still move mineral occurrences toward higher ranks after basement exposure is accounted for. That question connects the panels that follow."
+    ]
+  },
+  {
+    "heading": "2 Geological structure and magmatism",
+    "body": [
+      "The Taushan and Yangikazgan gold occurrences are associated with the sub-thrust Taushan mixtite succession. The mixtite contains flysch and olistostromal components, while major structural boundaries may have provided pathways for fluid movement. Host rock and structure must be distinguished: proximity to a vein does not, by itself, identify the source of the gold.",
+      "Rare-metal occurrences have a different geological context. Mirkamalov and colleagues report U–Pb ages of 353.5 ± 2.1 Ma for the Kuldjuktau gabbro-granitoid complex and approximately 349.1 ± 2.5 Ma for the West Tozbulak complex. These date intrusions; they do not automatically date ore formation. The poster also notes that its age table has not yet been fully reconciled with the USGS geochronological data."
+    ]
+  },
+  {
+    "heading": "3 Deposit types and genetic interpretation",
+    "body": [
+      "The poster compares two principal mineral systems. The first is gold associated with structures and quartz veins. An orogenic-gold model explains fluid migration along tectonic structures and precipitation under favorable physicochemical conditions. The local gold–quartz classification is consistent with this model, but this poster does not independently establish the fluid source or mineralization age of an individual occurrence.",
+      "The second system comprises rare-metal occurrences related to intrusive processes. Lepidolite- and spodumene-bearing pegmatites have been mapped at Aktosty–Shaydaraz; Mirkamalov and colleagues report 1.95 wt% Li₂O in one lepidolite sample. Values of ΣREE 600–800 ppm are reported for albitization zones at Tozbulak. These are geochemical observations for a sample or zone, not estimates of reserves or economic viability. Graphite and tungsten systems also occur in the area but are not the main subjects of this two-system comparison."
+    ]
+  },
+  {
+    "heading": "4 Mineral-occurrence dataset",
+    "body": [
+      "The archival catalogue contains 310 occurrences: 203 gold, 27 rare-metal, and 80 in other groups including mercury, copper, zinc and aluminium. Of the rare-metal entries, 17 carry an REE designation; all 27 should therefore not be described as REE occurrences. Gold accounts for about 68% of occurrences within exposed basement and serves as the reference system for comparison. Exact point coordinates are omitted from the poster because the catalogue is restricted.",
+      "Occurrences were not used to construct the evidence layers. The same catalogue was, however, used both to screen layers and to measure the resulting scores. Final enrichment values are therefore retrospective screening results, not an independent prediction test. Historical exploration may also have focused on exposed basement; we do not attribute the 96% concentration solely to geology."
+    ]
+  },
+  {
+    "heading": "5 Mineral-systems approach",
+    "body": [
+      "A mineral-systems approach starts with the geological process before selecting a map layer: a metal or fluid source, a pathway, a favorable site of deposition, and preservation. As McCuaig and colleagues explain, the process itself is not mapped directly; an observable geological trace is used as a proxy. Faults may indicate pathways, while quartz veins may mark possible sites of gold deposition.",
+      "We distinguish general proxies from system-specific ones. Lineaments, the surface-temperature gradient and spectral indices test broad spatial signals. Distances to quartz veins and intrusions test more specific geological hypotheses. Because the local source of the gold remains debated, we did not attach a separate source model to it."
+    ]
+  },
+  {
+    "heading": "6 From process to measurable evidence",
+    "body": [
+      "The central table follows one sequence: process, field or map expression, digital proxy, then test result. For gold, thrusts and faults were considered possible pathways and mapped quartz veins a proxy related to deposition. For rare metals, distance to an intrusion was tested because of the association with pegmatite–aplite veins and intrusive bodies. Surface exposure of the basement was controlled separately as an observation condition for both systems.",
+      "A distance result does not prove causation. Spatial proximity between gold and quartz veins, or between rare metals and intrusions, may agree with the geological model. Mapping density, past exploration priorities and host-rock effects still need to be separated through independent field and spatial tests. Panel 11 therefore presents these results as preliminary evidence for hypotheses."
+    ]
+  },
+  {
+    "heading": "7 The basement-exposure problem",
+    "body": [
+      "Paleozoic basement is exposed across approximately 21% of the domain, but nearly 96% of the 310 catalogued occurrences lie there. Under a uniform-area reference, exposure alone gives about 4.6-fold enrichment: 96 divided by 21. This figure does not measure mineral resources. It describes the spatial concentration of the existing catalogue in exposed basement.",
+      "Without this baseline, calling a high regional score a new-deposit signal would be risky. The 79% of the area beneath cover was not evaluated independently in this study. Geological signals may be more visible in exposed basement, and historical exploration may also have concentrated there."
+    ]
+  },
+  {
+    "heading": "8 Remote-sensing evidence and test procedure",
+    "body": [
+      "The initial combination used lineament density and a lateral gradient in land-surface temperature derived from Landsat 8 TIRS imagery across four seasons. Lineaments represent linear features in terrain and radar data; each line is not necessarily an ore-conducting fault. The temperature gradient measures differences between adjacent surface pixels. It is not the vertical geothermal gradient below ground. Relationships with lithology, emissivity, relief and other surface conditions require separate examination.",
+      "A total of 22 candidate layers were tested: 5 ASTER indices, 4 EMIT mineral maps, 2 archival geochemical layers, 1 magnetic layer, 5 geological-map layers and 5 structural-map layers. Sentinel data were also tested but not retained in the final combination. Each layer was converted to percentile ranks on a 100 m grid, and ranks were combined using the geometric mean. The fraction of occurrences falling within the top 20% of area was divided by that area fraction to calculate enrichment.",
+      "For the spatial null test, the whole set of occurrences was shifted together. This preserves the points' relative configuration while changing their position against the ranking map. A total of 500 shifts were requested initially. Because of domain-boundary constraints, 412 valid comparisons remained for the full-area result and 271 for the basement result. The poster's p values are nominal values for that historical procedure and the preceding layer selection."
+    ]
+  },
+  {
+    "heading": "9 The 67 first-pass screening zones",
+    "body": [
+      "The map shows 67 zones covering 556 km², or 23.5% of the 2,365 km² domain. These polygons come from the first-pass screening on 21 August 2026, before final layer screening. They should not be presented as a final map recomputed only from the layers that were retained later.",
+      "Zone boundaries depend on a ranking threshold, morphological cleaning and a minimum-area filter. Consequently, the 23.5% polygon area is not identical to the top-20%-area test in panel 10. Some zones on cover may reflect surface material or geomorphology; mineralization has not been confirmed. Without field checks and independent validation, they serve only to plan further work."
+    ]
+  },
+  {
+    "heading": "10 Main result and basement control",
+    "body": [
+      "Across the full domain, 73.1% of occurrences fall in the top 20% of area ranked by the combination of lineament density and temperature gradient. Since that area share is 20%, dividing 73.1 by 20 gives approximately 3.66-fold enrichment. The historical spatial-null calculation reported on the poster gives p ≈ 0.005. This calculation includes 309 occurrences falling on the grid; the full catalogue contains 310.",
+      "When the same question is asked only within exposed basement, the top 20% of area contains just 12.5% of 297 occurrences: 0.62-fold enrichment and p = 0.40. Although 0.62 is below the random reference of 1.0, p = 0.40 does not establish avoidance of occurrences. Much of the strong regional signal therefore reflects the contrast between exposed basement and cover. These general proxies did not reliably distinguish occurrences within basement."
+    ]
+  },
+  {
+    "heading": "11 System-specific associations within basement",
+    "body": [
+      "Among basement gold occurrences, 128 are closer to a quartz vein and 74 to an intrusion. Thus, about 63% of the 202 gold points favor quartz veins. In the rare-metal group, 17 of 27 points are closer to an intrusion and 10 to a quartz vein: again about 63%, but in the opposite direction. Fisher's exact test for the group difference gives p ≈ 0.012; a separately digitized map set gives p ≈ 0.009. These are different datasets, and their denominators must not be mixed.",
+      "The poster's 2.75-fold result for proximity to quartz veins, with p = 0.040, concerns the test of occurrences within basement and is largely driven by the abundance of gold. It should not be described as 2.75-fold enrichment for gold alone. This proxy and the Fisher result were selected after several layer tests, and the rare-metal sample is small. We therefore treat the difference as a geological hypothesis for field and spatial validation, not as proof of a magmatic source or an independent prediction."
+    ]
+  },
+  {
+    "heading": "12 Answer, limitations and next steps",
+    "body": [
+      "The main answer is that 3.66-fold enrichment across the full domain falls to 0.62-fold after controlling for exposed basement. We cannot therefore claim that the current general surface proxies reliably separate occurrences within basement. Distances to quartz veins and intrusions offer preliminary evidence for system-specific hypotheses, but this has not passed independent validation.",
+      "The limitations are clear: this is a retrospective analysis of an archival catalogue; exploration history may influence where observations occur; many layers were screened using the same occurrences; the rare-metal group contains only 27 objects; and the covered area was not assessed. Testing standard remote-sensing indices does not establish that other, specialized spectral methods are unhelpful. Next, the added predictive value beyond basement exposure should be tested on independent or spatially separated occurrences. The physical cause of the temperature gradient also needs investigation, while REE- and Li-specific proxies should be tested with field data."
+    ]
+  },
+  {
+    "heading": "Conclusion",
+    "body": [
+      "The value of this study is not to equate every high score with a new deposit. It first separates the effect of geological exposure, then identifies which mappable controls for gold and rare metals merit further field testing. Thank you."
+    ]
+  }
+]
