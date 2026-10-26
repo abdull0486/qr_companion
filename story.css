@@ -1,12 +1,14 @@
 :root {
   color-scheme: light;
   --paper: #ffffff;
-  --stone: #f4f5f3;
+  --stone: #f3f4ef;
   --stone-soft: #f8f8f5;
-  --ink: #252d2c;
-  --muted: #68716e;
-  --line: rgba(37, 45, 44, 0.12);
-  --line-strong: rgba(37, 45, 44, 0.2);
+  --stone-deep: #eef0eb;
+  --ink: #252520;
+  --ink-soft: #3b3d38;
+  --muted: #6f716a;
+  --line: rgba(37, 37, 32, 0.12);
+  --line-strong: rgba(37, 37, 32, 0.18);
   --strata: #53654c;
   --strata-soft: rgba(83, 101, 76, 0.08);
   --violet: #69577b;
@@ -16,12 +18,12 @@
   --glass: rgba(255, 255, 255, 0.92);
   --dark-overlay: rgba(20, 25, 24, 0.85);
   --nav-offset: 112px;
-  --shadow-soft: 0 16px 36px rgba(37, 45, 44, 0.06);
-  --shadow-card: 0 6px 18px rgba(37, 45, 44, 0.04);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --shadow-soft: 0 18px 38px rgba(37, 37, 32, 0.05);
+  --shadow-card: 0 10px 26px rgba(31, 31, 27, 0.06);
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
 }
 
 @media (max-width: 390px) {
@@ -174,32 +176,34 @@ summary:focus-visible {
 
 .cover-panel {
   position: relative;
-  max-width: 670px;
+  max-width: 720px;
   margin: -18px 14px 0;
-  padding: 22px 20px 22px;
-  background: #ffffff;
+  padding: 22px 20px 24px;
+  background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 h1 {
-  font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  font-size: clamp(1.48rem, 5.5vw, 2.35rem);
-  font-weight: 650;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
+  font-family: "Segoe UI", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.65rem, 5.8vw, 2.75rem);
+  font-weight: 750;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
   margin: 0 0 18px;
   color: var(--ink);
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .authors {
-  font-size: 0.91rem;
-  font-weight: 550;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.65;
   margin: 0 0 10px;
-  color: var(--ink);
+  color: var(--ink-soft);
 }
 
 .authors sup {
@@ -730,19 +734,22 @@ figcaption a .icon {
 }
 
 .chapter-number {
-  font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  font-size: 0.78rem;
+  font-family: "Segoe UI", "Avenir Next", Arial, sans-serif;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  min-width: 40px;
-  height: 38px;
+  letter-spacing: 0.12em;
+  min-width: 48px;
+  height: 42px;
+  padding: 0 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-sm);
-  background: var(--group-soft, var(--strata-soft));
-  color: var(--group, var(--strata));
-  border: 1px solid rgba(37, 45, 44, 0.08);
+  background: linear-gradient(135deg, rgba(83, 101, 76, 0.14), rgba(105, 87, 123, 0.09));
+  border: 1px solid rgba(83, 101, 76, 0.18);
+  color: var(--ink);
+  line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
   flex-shrink: 0;
 }
 
@@ -759,8 +766,8 @@ figcaption a .icon {
   line-height: 1.4;
   margin: 0 0 6px;
   color: var(--muted);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -772,11 +779,11 @@ figcaption a .icon {
 }
 
 .chapter h2 {
-  font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  font-size: 1.45rem;
-  line-height: 1.25;
-  font-weight: 650;
-  letter-spacing: -0.02em;
+  font-family: "Segoe UI", "Avenir Next", Arial, sans-serif;
+  font-size: clamp(1.45rem, 2.4vw, 2.1rem);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  font-weight: 700;
   margin: 0;
   color: var(--ink);
 }
@@ -804,11 +811,11 @@ figcaption a .icon {
 }
 
 .chapter-copy > p {
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 1.12rem;
   line-height: 1.84;
-  letter-spacing: 0.003em;
-  color: #262c2a;
+  letter-spacing: 0.002em;
+  color: var(--ink-soft);
   margin: 0 0 22px;
 }
 
